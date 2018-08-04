@@ -55,6 +55,9 @@
                                     <constraint firstAttribute="height" constant="30" id="NHB-pa-yEg"/>
                                 </constraints>
                                 <state key="normal" title="Forgot User Name?"/>
+                                <connections>
+                                    <action selector="forgotUserNameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qaE-Ko-SbO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afu-pr-BGh">
                                 <rect key="frame" x="222" y="464" width="123" height="30"/>
@@ -62,6 +65,9 @@
                                     <constraint firstAttribute="height" constant="30" id="auw-Sl-3CN"/>
                                 </constraints>
                                 <state key="normal" title="Forgot Password?"/>
+                                <connections>
+                                    <action selector="forgotPasswordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8A2-cz-JGz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.65098039220000004" green="0.74117647060000003" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -81,6 +87,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" largeTitleDisplayMode="always" id="GPu-So-4q5"/>
                     <connections>
+                        <outlet property="forgotPasswordButton" destination="Afu-pr-BGh" id="ftx-4u-D2J"/>
+                        <outlet property="forgotUserNameButton" destination="3pe-ff-ihe" id="Hur-NR-Kw6"/>
+                        <outlet property="loginButton" destination="Xdy-8X-qtN" id="dIK-xo-dNa"/>
                         <outlet property="userName" destination="eLH-Xh-ymH" id="wsU-B2-vlH"/>
                     </connections>
                 </viewController>
