@@ -23,17 +23,17 @@ class ViewController: UIViewController {
 //    }
 //
 //    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-
+    //        super.didReceiveMemoryWarning()
+    //        // Dispose of any resources that can be recreated.
+    //    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let sender = sender as? UIButton else {return}
         
         if sender == forgotUserNameButton{
             segue.destination.navigationItem.title = "Forgot Username"}
             
-            else if sender == forgotPasswordButton{
+        else if sender == forgotPasswordButton{
             segue.destination.navigationItem.title = "Forgot Password"}
             
             else{
