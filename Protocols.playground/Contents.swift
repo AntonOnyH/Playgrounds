@@ -24,3 +24,28 @@ print(myShoe)
 print(yourShoe)
 
 
+struct Employee: Equatable {
+   var firstName: String
+    var lastName: String
+    var jobTitle: String
+    var phoneNumber: String
+    
+}
+
+struct Company {
+    var name: String
+    var employees: [Employee]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
