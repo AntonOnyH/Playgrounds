@@ -20,8 +20,8 @@ class Shoe: CustomStringConvertible{
 let myShoe = Shoe(color: "black", size: 12, hasLaces: true)
 let yourShoe = Shoe(color: "red", size: 8, hasLaces: false)
 
-print(myShoe)
-print(yourShoe)
+//print(myShoe)
+//print(yourShoe)
 
 
 struct Employee: Equatable {
