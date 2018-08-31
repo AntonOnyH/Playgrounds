@@ -5,9 +5,18 @@ import PlaygroundSupport
 
 PlaygroundPage.current.needsIndefiniteExecution = true
 
+extension URL {
+    func withQueries(_ quereis :[String: String]) -> URL? {
+        var components = URLComponents(url: self, resolvingAgainstBaseURL: true)
+        components?.queryItems = quereis.compactMap { URLQueryItem(name: $0.0, value: $0.1)}
+        return components?.url
+    }
+}
 
+let baseURL = URL(string: "GET https://api.nasa.gov/planetary/apod")!
 
-let url = URL(string: "GET https://api.nasa.gov/planetary/apodDEMO_KEY")!
+let query: [String: String] = ["api_key": "DEMO_KEY",]
+let url = baseURL.withQueries(query)!
 let task = URLSession.shared.dataTask(with: url) {(data, response, error)
     in
     if let data = data,
@@ -18,13 +27,19 @@ let task = URLSession.shared.dataTask(with: url) {(data, response, error)
     
 }
 
+ 
+
 task.resume()
 
 
-extension URL {
-    func withQueries(_ quereis :[String: String]) -> URL? {
-        var components = URLComponents(url: self, resolvingAgainstBaseURL: true)
-        components?.queryItems = quereis.flatMap { URLQueryItem(name: $0.0, value: $0.1)}
-        return components?.url
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
